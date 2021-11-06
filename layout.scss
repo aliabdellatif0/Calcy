@@ -1,0 +1,67 @@
+@media screen and (max-width: 1440px){
+    .heading{
+        position: relative;
+        left: 150px;
+        font-family: Arial;
+        font-size: 30px;
+        color: rgb(59, 59, 59);
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: white;
+        // padding: 10px;
+        width: 500px;
+        position: relative;
+        left: 200px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
+        
+      }      
+      .grid-item {
+        background-color: white;
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .calc-button:hover{
+        filter: brightness(90%);
+      }
+    
+      button{
+          padding: 10px;
+          background-color: transparent;
+          font-size: larger;
+          border:none;
+
+      }
+    
+      .operator{
+        background: rgb(235,235,235);
+      }
+
+      .executor{
+        background: linear-gradient(25deg, rgba(205,112,209,1) 0%, rgba(218,171,41,1) 100%);
+      } 
+    
+      .display{
+        grid-column: span 4;
+        background: linear-gradient(25deg, rgba(205,112,209,1) 0%, rgba(218,171,41,1) 100%);
+        height: 100px;
+        color: white; 
+        text-align: end;      
+        font-size: 4rem;
+      }
+    
+      .grid-item-special{
+        grid-column: span 2;
+        
+      }
+    
+      .special-button{
+          padding-left: 40px;
+          padding-right: 40px;
+      }
+    }
+    
