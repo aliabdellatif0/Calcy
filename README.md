@@ -1,32 +1,54 @@
-# Calculator
+# Calcy :earth_africa:
+## A JavaScript Calculator
 
-A calculator designed using HTML & SCSS, with JavaScript incorporated for its functional and interactive uses.
+![js-calculator](https://github.com/aliabdellatif0/Calcy/blob/main/calculator.png)
 
-This calculator will take in basic inputs and perform operations on two separate numbers which will be treated as floats so YES you can use decimal points.
+## Design :art:
+The *Calcy* Calculator was designed to be responsive by taking the approoach of designing the mobile version first and the tablet and desktop versions afterwards. Mobile version :point_down:
 
-Errors will be alerted on screen and the calculator shall reset if you input a mathematically invlaid line.
+![js-calculator](https://github.com/aliabdellatif0/Calcy/blob/main/mobileCalcy.png)
 
-Some complex mathemtical lines may still return a value however they will be incorrect due to the nature of the code
+## Logic :abacus:
+The calculator consists of:
+- _A display section_ where users will see there input and the ouputted result
+- _Operators:_ Addition, Subtraction, Multiplication, Division & Percentage
+- _Numbers_ from 0 to 9
+- _Important buttons:_ 
+    - _Equal_ button that will return the result of the operation inputted
+    - _(.) button_ to allow for float operations
+    - _AC_ button to reset the display
 
-P.s. you can operate on the output provided to you as the answer on the display
+## The Code :computer:
+The imortant part of the logical code is shown below. Whereby a switch flow is used to determine the operand and parse the input before and after the operand in order to perform a standard calculation.
+
+```javascript
+for (let i = 1; i<inTheDisplay.length; i++ ){
+        let x = inTheDisplay.charAt(i)
+
+        switch(x){
+            case '+' :
+                newLine.push(parseFloat(inTheDisplay.substr(0,i)) +
+                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
+            break;
+            case '-' :
+                newLine.push(parseFloat(inTheDisplay.substr(0,i)) -
+                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
+            break;
+            case '/' :
+                newLine.push(parseFloat(inTheDisplay.substr(0,i)) /
+                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
+            break;
+            case '*' :
+                newLine.push(parseFloat(inTheDisplay.substr(0,i)) *
+                parseFloat(inTheDisplay.substr(i+1, inTheDisplay.length)))
+            break;
+            case '%' :
+                newLine.push((parseFloat(inTheDisplay.substr(0,i)))/ 100)
+                
+            break;
+        }
+```
 
 
-//Testing ->
 
-In regards to testing a cypress approach was taken where by the test file is included within the repo and by running the command 'npx cypress open' you can proceed with running the tests.
 
-//Pseudocode below ->
-Approach buttons using a css grid layout 
-
-Buttons all laid out now; output bar at the top is done and a satisfactory colour scheme is included
-
-Approach solution by assinging two inputs separated by operator to a variable through function on buttons.
-
-Issue has arose given assinging of variables whereby tried to solve using boolean however too many bugs encountered
-
-Taken a simplistic approach with many uses to for loop until operator found. 
-
-split the string to before operator and after and use swith to go through what the operator was
-
-through switch perform your calculation
-# Calcy
